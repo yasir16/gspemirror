@@ -108,7 +108,7 @@ else
 	exit;
 fi
 
-cd ~/GspeMirror  || exit
+cd ~/gspemirror  || exit
 echo -e "\e[96mInstalling dependencies ...\e[90m"
 if npm install; then 
 	echo -e "\e[92mDependencies installation Done!\e[0m"
@@ -127,13 +127,13 @@ if command_exists plymouth; then
 	echo -e "\e[90mSplashscreen: Checking themes directory.\e[0m"
 	if [ -d $THEME_DIR ]; then
 		echo -e "\e[90mSplashscreen: Create theme directory if not exists.\e[0m"
-		if [ ! -d $THEME_DIR/GspeMirror ]; then
-			sudo mkdir $THEME_DIR/GspeMirror
+		if [ ! -d $THEME_DIR/gspemirror ]; then
+			sudo mkdir $THEME_DIR/gspemirror
 		fi
 
-		if sudo cp ~/GspeMirror/splashscreen/splash.png $THEME_DIR/GspeMirror/splash.png && sudo cp ~/GspeMirror/splashscreen/GspeMirror.plymouth $THEME_DIR/GspeMirror/GspeMirror.plymouth && sudo cp ~/GspeMirror/splashscreen/GspeMirror.script $THEME_DIR/GspeMirror/GspeMirror.script; then
+		if sudo cp ~/gspemirror/splashscreen/splash.png $THEME_DIR/gspemirror/splash.png && sudo cp ~/gspemirror/splashscreen/MagicMirror.plymouth $THEME_DIR/gspemirror/MagicMirror.plymouth && sudo cp ~/gspemirror/splashscreen/MagicMirror.script $THEME_DIR/gspemirror/MagicMirror.script; then
 			echo -e "\e[90mSplashscreen: Theme copied successfully.\e[0m"
-			if sudo plymouth-set-default-theme -R GspeMirror; then
+			if sudo plymouth-set-default-theme -R MagicMirror; then
 				echo -e "\e[92mSplashscreen: Changed theme to GspeMirror successfully.\e[0m"
 			else
 				echo -e "\e[91mSplashscreen: Couldn't change theme to GspeMirror!\e[0m"
@@ -153,11 +153,11 @@ read -p "Do you want use pm2 for auto starting of your GspeMirror (y/N)?" choice
 if [[ $choice =~ ^[Yy]$ ]]; then
     sudo npm install -g pm2
     sudo su -c "env PATH=$PATH:/usr/bin pm2 startup linux -u pi --hp /home/pi"
-    pm2 start ~/GspeMirror/installers/pm2_GspeMirror.json
+    pm2 start ~/gspemirror/installers/pm2_GspeMirror.json
     pm2 save
 fi
 
 echo " "
-echo -e "\e[92mWe're ready! Run \e[1m\e[97mDISPLAY=:0 npm start\e[0m\e[92m from the ~/GspeMirror directory to start your GspeMirror.\e[0m"
+echo -e "\e[92mWe're ready! Run \e[1m\e[97mDISPLAY=:0 npm start\e[0m\e[92m from the ~/gspemirror directory to start your GspeMirror.\e[0m"
 echo " "
 echo " "
