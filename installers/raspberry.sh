@@ -90,10 +90,10 @@ fi
 
 # Install GspeMirror
 cd ~
-if [ -d "$HOME/GspeMirror" ] ; then
+if [ -d "$HOME/gspemirror" ] ; then
 	echo -e "\e[93mIt seems like GspeMirror is already installed."
 	echo -e "To prevent overwriting, the installer will be aborted."
-	echo -e "Please rename the \e[1m~/GspeMirror\e[0m\e[93m folder and try again.\e[0m"
+	echo -e "Please rename the \e[1m~/gspemirror\e[0m\e[93m folder and try again.\e[0m"
 	echo ""
 	echo -e "If you want to upgrade your installation run \e[1m\e[97mgit pull\e[0m from the ~/GspeMirror directory."
 	echo ""
