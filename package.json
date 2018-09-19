@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MichMich/MagicMirror.git"
+    "url": "git+https://github.com/yasir16/gspemirror.git"
   },
   "keywords": [
     "magic mirror",
@@ -26,11 +26,11 @@
   ],
   "author": "Michael Teeuw",
   "contributors": [
-    "https://github.com/MichMich/MagicMirror/graphs/contributors"
+    "https://github.com/yasir16/gspemirror/graphs/contributors"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MichMich/MagicMirror/issues"
+    "url": "https://github.com/yasir16/gspemirror/issues"
   },
   "homepage": "https://magicmirror.builders",
   "devDependencies": {
