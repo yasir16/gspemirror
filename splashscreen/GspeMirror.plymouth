@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=GspeMirror
+Description=Mirror Splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/GspeMirror
+ScriptFile=/usr/share/plymouth/themes/GspeMirror/GspeMirror.script
